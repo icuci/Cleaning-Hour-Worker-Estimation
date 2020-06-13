@@ -19,6 +19,10 @@
 	width: 150px;
   	margin: 40px auto;
 }
+#submitButton {
+	width: 20%; 
+	margin: 30px auto;
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
 	#text1{
@@ -27,6 +31,9 @@
 	.s1 h2 {
 		font-size: 20px;
 		margin: 0px 0px;
+	}
+	#submitButton{
+		width: 50%;
 	}
 	.center{
 		width: 150px;
