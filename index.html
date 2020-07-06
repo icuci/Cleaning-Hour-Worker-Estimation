@@ -1,74 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 	<title>Estimati Cleaning Hour & Worker Needed</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"
+		id="bootstrap-css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+
 
 </head>
+
 <body>
+	<button class="btn btn-outline-primary" id="en">English</button>
+	<button class="btn btn-outline-primary" id="my">Melayu</button>
+	<button class="btn btn-outline-primary" id="cn">中文</button>
 	<div class="s1">
-		<img src="icuci.jpg" alt="iCuci Logo" style="width:200px; height:200px; margin-top:0; border-radius:20px; " >
-		<h1 id="text1" style="margin: 0px auto">How many hours and cleaners I need?</h1>
+
+		<img src="icuci.jpg" alt="iCuci Logo" style="width:200px; height:200px; margin-top:0; border-radius:20px; ">
+		<h1 id="text1" class="lang" key="title1" style="margin: 0px auto">How many hours and cleaners I need?</h1>
 		<!-- <h2 id="typeofService">Type of Property:</h2> -->
 		<div class="radio">
-	      <label><input type="radio" id="landed" name="propertyType" value="1" checked>Landed Property</label>
-	      <p></p>
-	      <label><input type="radio" id="highrise" name="propertyType" value="2" >High-Rise Property</label>
-	    </div>
-		<h2 id="bedroom">Number of Bedroom:</h2>
-		<div class="center">
-		    <p>
-		      </p><div class="input-group">
-		          <span class="input-group-btn">
-		              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-		                  <span class="glyphicon glyphicon-minus"></span>
-		              </button>
-		          </span>
-		          <input type="text" id="bedroomNo" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
-		          <span class="input-group-btn">
-		              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-		                  <span class="glyphicon glyphicon-plus"></span>
-		              </button>
-		          </span>
-		      </div>
-		    <p></p>	   
+			<input type="radio" id="landed" name="propertyType" value="1" checked><label for="landed" class="lang"
+				key="pro1">Landed Property</label>
+			<p></p>
+			<input type="radio" id="highrise" name="propertyType" value="2"><label for="highrise" class="lang"
+				key="pro2">High-Rise Property</label>
 		</div>
-		<h2 id="toilet">Number of Toilet:</h2>
+		<h2 id="bedroom" class="lang" key="bed">Number of Bedroom:</h2>
 		<div class="center">
-		    <p>
-		      </p><div class="input-group">
-		          <span class="input-group-btn">
-		              <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[2]">
-		                  <span class="glyphicon glyphicon-minus"></span>
-		              </button>
-		          </span>
-		          <input type="text" id="toiletNo" name="quant[2]" class="form-control input-number" value="1" min="1" max="10">
-		          <span class="input-group-btn">
-		              <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
-		                  <span class="glyphicon glyphicon-plus"></span>
-		              </button>
-		          </span>
-		      </div>
-		    <p></p>	   
+			<p>
+			</p>
+			<div class="input-group">
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+						data-field="quant[1]">
+						<span class="glyphicon glyphicon-minus"></span>
+					</button>
+				</span>
+				<input type="text" id="bedroomNo" name="quant[1]" class="form-control input-number" value="1" min="1"
+					max="10">
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+						<span class="glyphicon glyphicon-plus"></span>
+					</button>
+				</span>
+			</div>
+			<p></p>
 		</div>
-		
-		<button onclick="handleFormSubmit(); location.href='#estimate'" id="submitButton" class="btn btn-primary btn-block">Our Recommendation</button>
+		<h2 id="toilet" class="lang" key="toi">Number of Toilet:</h2>
+		<div class="center">
+			<p>
+			</p>
+			<div class="input-group">
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+						data-field="quant[2]">
+						<span class="glyphicon glyphicon-minus"></span>
+					</button>
+				</span>
+				<input type="text" id="toiletNo" name="quant[2]" class="form-control input-number" value="1" min="1"
+					max="10">
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[2]">
+						<span class="glyphicon glyphicon-plus"></span>
+					</button>
+				</span>
+			</div>
+			<p></p>
+		</div>
+
+		<button onclick="handleFormSubmit(); location.href='#estimate'" id="submitButton"
+			class="btn btn-primary btn-block" key="Sbmt">Our Recommendation</button>
 
 		<h2 id="estimate" style="color: #761fad"></h2>
 	</div>
 
-	  
+
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="./app.js"></script>
 	<script>
-		 
+
 	</script>
 
 </body>
+
 </html>
