@@ -28,7 +28,7 @@ arrLang['en']['toi'] = 'Number of Toilet:';
 arrLang['en']['Sbmt'] = 'Our Recommendation';
 
 // Malay content 
-arrLang['my']['title1'] = 'Berapa jam dan perbersih yang saya perlukan?';
+arrLang['my']['title1'] = 'Berapa jam dan pembersih yang saya perlukan?';
 arrLang['my']['pro1'] = 'Properti atas tanah';
 arrLang['my']['pro2'] = 'Properti bertingkat tinggi';
 arrLang['my']['bed'] = 'Bilangan Bilik Tidur:';
