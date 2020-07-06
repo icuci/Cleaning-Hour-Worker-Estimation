@@ -573,8 +573,5 @@ $(function () {
         $('#submitButton').each(function (index, item) {
             $(this).text(arrLang[lang][$(this).attr('key')]);
         });
-        $('#radio').each(function (index, item) {
-            $(this).text(arrLang[lang][$(this).attr('key')]);
-        });
     });
 });
